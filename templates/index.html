@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Modern Home — Mebel Showroom</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Modern Home</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Barcha Mebellar</a>
+            <a href="{{ url_for('index', room='Mehmonxona') }}">Mehmonxona</a>
+            <a href="{{ url_for('index', room='Yotoqxona') }}">Yotoqxona</a>
+            <a href="{{ url_for('index', room='Oshxona') }}">Oshxona</a>
+            <a href="{{ url_for('add_furniture') }}" class="add-btn">+ Yangi Mebel</a>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
